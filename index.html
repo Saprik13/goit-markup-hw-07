@@ -13,30 +13,46 @@
     integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/styles.css">
-
+<!-- <link rel="stylesheet" href="./css/main.css"> -->
 </head>
 <body class="body">
 <!-- header -->
-<header class="header">
+<header class="page-header">
     <!-- навигация -->
-        <div class="main-nav container">
-            <nav class="navigation">
-            <a href="./index.html" class="logo logo-h">Web<span class="logo-header">Studio</span></a>
-            <ul class="site-nav">
-                <li class="nav-item"><a href="./index.html" class="nav-link current">Студия</a></li>
-                <li class="nav-item"><a href="./portfolio.html" class="nav-link">Портфолио</a></li>
-                <li class="nav-item"><a href="/" class="nav-link">Контакты</a></li>
+        <div class="container header-section">
+            <nav class="navigation-wrapper">
+            <a href="./index.html" class="navigation-wrapper__logo logo">Web<span class="navigation-wrapper__logo-custom">Studio
+            </span>
+            </a>
+          
+            <ul class="site-nav"> 
+                <li class="site-nav__item">
+                    <a href="./index.html" class="site-nav__link site-nav__link--current">Студия</a>
+                </li>
+                <li class="site-nav__item">
+                    <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
+                </li>
+                <li class="site-nav__item">
+                    <a href="/" class="site-nav__link">Контакты</a>
+                </li>
             </ul>
         </nav>
-        <ul class="header-info">
-            <li class="nav-item"><a href="mailto:info@devstudio.com" class="contacts-header">
-            <svg class="contacts-ico" width="16" height="12">
+        
+        <ul class="header-contacts">
+            <li class="header-contacts__item">
+                <a href="mailto:info@devstudio.com" class="header-contacts__link">
+            <svg class="header-contacts__icon" width="16" height="12">
                     <use href="./images/sprite.svg#icon-mail"></use>
-                </svg>info@devstudio.com</a></li>
-            <li class="nav-item"><a href="tel:+380961111111" class="contacts-header">
-            <svg class="contacts-ico" width="10" height="16">
+                </svg>info@devstudio.com
+            </a>
+        </li>
+            <li class="header-contacts__item">
+                <a href="tel:+380961111111" class="header-contacts__link">
+            <svg class="header-contacts__icon" width="10" height="16">
                     <use href="./images/sprite.svg#icon-smartphone"></use>
-                </svg>+38 096 111 11 11</a></li>
+                </svg>+38 096 111 11 11
+            </a>
+        </li>
         </ul>
     </div>
 </header>  
@@ -54,43 +70,43 @@
             </svg>
         </button>
 <!-- форма модального окна -->
-        <b class="modal-headline">Оставьте свои данные, мы вам перезвоним</b>
-          
-        <form class="modal-form js-form">
-                
-            <label class="form-input-label">
+<div class="modal-form">
+            <b class="modal-form__headline">Оставьте свои данные, мы вам перезвоним</b>
+        <form class="modal-form__input-group js-form">
+            <label class="modal-form__label">
                     Имя
-                    <input class="form-input" type="text" name="user-name" autofocus required>
-                    <svg class="form-input-icon">
+                    <input class="modal-form__input" type="text" name="user-name" autofocus required>
+                    <svg class="modal-form__input-icon">
                         <use href="images/icons.svg#icon-person-blk"></use>
                     </svg>
                 </label>
               
-                <label class="form-input-label">
+                <label class="modal-form__label">
                     Телефон
-                    <input class="form-input" type="tel" name="user-tel" pattern="[0-9]{10}" title="0991234567" required>
-                    <svg class="form-input-icon">
+                    <input class="modal-form__input" type="tel" name="user-tel" pattern="[0-9]{10}" title="0991234567" required>
+                    <svg class="modal-form__input-icon">
                         <use href="images/icons.svg#icon-phone-blk"></use>
                     </svg>
                 </label>
                
-                <label class="form-input-label">
+                <label class="modal-form__label">
                     Почта
-                    <input class="form-input" type="email" name="user-mail">
-                    <svg class="form-input-icon">
+                    <input class="modal-form__input" type="email" name="user-mail">
+                    <svg class="modal-form__input-icon">
                         <use href="images/icons.svg#icon-email-blk"></use>
                     </svg>
                 </label>
               
-                <label class="form-input-label message">
+                <label class="modal-form__label modal-form__label--comment">
                 Комментарий
-                    <textarea class="form-message" name="user-msg" placeholder="Введите текст"></textarea> 
+                    <textarea class="modal-form__textarea" name="user-msg" placeholder="Введите текст"></textarea> 
                 </label>
             
-                <input class="policy-checkbox" type="checkbox" id="policy_check">
-                <label class="policy-box" for="policy_check">Соглашаюсь с рассылкой и принимаю &nbsp;<a href="/">Условия договора</a></label>
-                <button type="submit" class="submit-form-btn">Отправить</button>
+                <input class="modal-form__policy-checkbox" type="checkbox" id="policy_check">
+                <label class="modal-form__policy-box" for="policy_check">Соглашаюсь с рассылкой и принимаю &nbsp;<a href="/">Условия договора</a></label>
+                <button type="submit" class="modal-form__button">Отправить</button>
             </form>
+        </div>
     </div>
 </div>
 
@@ -389,18 +405,28 @@
 </main>
 <!-- footer -->
 <footer class="page-footer">
-    <div class="footer container">
-<!-- контакты футера -->
-        <div class="contacts-ft">
-        <a href="./index.html" class="logo logo-f">Web<span class="logo-footer">Studio</span></a>
+
+    <div class="container footer-section">
+        <div class="footer-section__wrapper">
+        <a href="./index.html" class="footer-section__logo logo">Web<span class="footer-section__logo-custom">Studio
+            </span>
+        </a>
         <address>
-            <ul class="footer-info">
-                <li class="footer-item"><a href="https://goo.gl/maps/7974E7wmpm6zUWJ98" class="contacts-footer location">г.
+            <ul class="footer-contacts">
+                <li class="footer-contacts__item">
+                    <a href="https://goo.gl/maps/7974E7wmpm6zUWJ98" class="footer-contacts__link footer-contacts__link--adds">г.
                         Киев, пр-т Леси
-                        Украинки, 26</a>
+                        Украинки, 26
+                    </a>
                 </li>
-                <li class="footer-item"><a href="mailto:info@devstudio.com" class="contacts-footer">info@devstudio.com</a></li>
-                <li class="footer-item"><a href="tel:+380991111111" class="contacts-footer">+38 099 111 11 11</a></li>
+                <li class="footer-contacts__item">
+                    <a href="mailto:info@devstudio.com" class="footer-contacts__link">info@devstudio.com
+                    </a>
+                </li>
+                <li class="footer-contacts__item">
+                    <a href="tel:+380991111111" class="footer-contacts__link">+38 099 111 11 11
+                    </a>
+                </li>
             </ul>
         </address>
 </div>
@@ -439,17 +465,20 @@
             </ul>
             </div>
 <!-- рассылка -->
-<form class="mailing-ft js-form" autocomplete="off">
-    <label for="user_mail" class="mailing-title-ft">Подпишитесь на рассылку</label>    
-    <div class="form-field-ft">
-        <input id="user_mail" type="email" name="email" class="input-ft" placeholder="E-mail"/>
-        <button type="submit" class="submit-btn-ft">Подписаться
-            <svg class="icon-send-ft">
+<div class="footer-form">
+<form class="mailing-form js-form" autocomplete="off">
+    <label for="user_mail" class="mailing-form__label">Подпишитесь на рассылку</label>    
+    <div class="input-wrap">
+        <input id="user_mail" type="email" name="email" class="mailing-form__input" placeholder="E-mail"/>
+        <button type="submit" class="mailing-form__button">Подписаться
+            <svg class="mailing-form__icon">
                 <use href="./images/icons.svg#icon-send"></use>
             </svg>
         </button>
     </div>
-</form> 
+</form>
+</div> 
+</div>
 </footer>
 <!-- скрипты -->
 <script src="./js/modal.js"></script>

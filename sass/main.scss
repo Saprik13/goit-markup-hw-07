@@ -1,3 +1,8 @@
-@import "./utils/variabless";
-@import "./components/page-header";
-@import "./components/logo"
+// переменные
+@import './utils/variabless';
+@import './utils/animations';
+
+// базовые стили и нормалайз
+@import './base/normalize';
+@import './base/reset-css';
+@import './base/base-style';

@@ -1,121 +1,12 @@
-:root {
-  /* цвета */
-  --title-text-color: #212121;
-  --secondary-background-color: #f5f4fa;
-  --primary-text-color: #757575;
-  --accent-color: #2196f3;
-  --fill-main: #afb1b8;
-  /* шрифты */
-  --primary-font: 'Roboto';
-  --secondary-font: 'Raleway';
-  /* переходы */
-  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
-body {
-  color: var(--title-text-color);
-  font-family: var(--primary-font), sans-serif;
-  background-color: #fff;
-}
 
-address {
-  font-style: normal;
-}
-
-ul,
-ol {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-input,
-textarea {
-  outline: none;
-}
-/* анимация */
-@keyframes pulse {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-
-  10%,
-  20% {
-    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
-    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
-  }
-
-  30%,
-  50%,
-  70%,
-  90% {
-    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-  }
-
-  40%,
-  60%,
-  80% {
-    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-  }
-
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-}
 
 /* ================================================ */
-/* ===container=== */
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 1200px;
-}
-/* скрытые элементы */
-.vis-hidden,
-.modal-form__policy-checkbox {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0px;
-  padding: 0px;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
+
 /* ========================================= */
 /* ===навигация сайта===, ===header=== */
-.page-header {
+.header {
   border-bottom: 1px solid #ececec;
   position: sticky;
   top: -1px;
@@ -123,21 +14,21 @@ textarea {
   z-index: 99;
 }
 
-.header-section {
+.main-nav {
   display: flex;
 }
 
-.header-contacts__icon {
+.contacts-ico {
   margin-right: 10px;
   fill: var(--primary-text-color);
   transition: fill 250ms var(--timing-function);
 }
-.header-contacts__link:hover .header-contacts__icon,
-.header-contacts__link:focus .header-contacts__icon {
+.contacts-header:hover .contacts-ico,
+.contacts-header:focus .contacts-ico {
   fill: var(--accent-color);
 }
 
-.header-contacts {
+.header-info {
   display: flex;
   margin-left: auto;
 }
@@ -146,25 +37,24 @@ textarea {
   display: flex;
 }
 
-.navigation-wrapper {
+.navigation {
   display: flex;
   align-items: center;
 }
 
-.site-nav__item, .header-contacts__item {
+.nav-item {
   display: flex;
   align-content: center;
   margin-right: 40px;
   align-items: center;
 }
 
-.site-nav__item:last-child,
-.header-contacts__item:last-child {
+.nav-item:last-child {
   margin-right: 0;
 }
 
-.site-nav__link,
-.header-contacts__link {
+.nav-link,
+.contacts-header {
   padding: 32px 0;
   display: block;
   color: var(--title-text-color);
@@ -174,26 +64,26 @@ textarea {
   letter-spacing: 0.02em;
   transition: color 250ms var(--timing-function);
 }
-.header-contacts__link {
+.contacts-header {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   color: var(--primary-text-color);
 }
 
-.site-nav__link:focus,
-.header-contacts__link:hover,
-.site-nav__link:hover,
-.header-contacts__link:focus {
+.nav-link:focus,
+.contacts-header:hover,
+.nav-link:hover,
+.contacts-header:focus {
   color: var(--accent-color);
 }
 
-.site-nav__link--current {
+.nav-link.current {
   position: relative;
   color: var(--accent-color);
 }
 
-.site-nav__link.site-nav__link--current::after {
+.nav-link.current::after {
   content: '';
   display: block;
   position: absolute;
@@ -216,11 +106,11 @@ textarea {
   letter-spacing: 0.03em;
 }
 
-.navigation-wrapper__logo.logo {
+.logo.logo-header {
   margin-right: 93px;
 }
 
-.navigation-wrapper__logo-custom {
+.logo-header-txt {
   color: #000;
 }
 
@@ -244,10 +134,10 @@ textarea {
   margin-right: auto;
   margin-left: auto;
 }
-/* кнопки */
+
 .hero-button,
-.mailing-form__button,
-.modal-form__button {
+.submit-btn-ft,
+.submit-form-btn {
   border-radius: 4px;
   border: transparent;
   display: inline-block;
@@ -341,11 +231,11 @@ textarea {
 }
 /* ========================================== */
 /* форма модального окна */
-.modal-form__input-group {
+.modal-form {
   margin-top: 12px;
 }
 
-.modal-form__headline {
+.modal-headline {
   font-size: 20px;
   line-height: 1.5;
   text-align: center;
@@ -353,8 +243,8 @@ textarea {
   color: var(--title-text-color);
 }
 /* инпуты */
-.modal-form__input,
-.modal-form__textarea {
+.form-input,
+.form-message {
   width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -364,18 +254,18 @@ textarea {
   transition: border 250ms var(--timing-function);
 }
 
-.modal-form__input:focus,
-.modal-form__input:hover,
-.modal-form__textarea:focus,
-.modal-form__textarea:hover {
+.form-input:focus,
+.form-input:hover,
+.form-message:focus,
+.form-message:hover {
   border: 1px solid var(--accent-color);
 }
 
-.modal-form__input:focus + .modal-form__input-icon,
-.modal-form__input:hover + .modal-form__input-icon {
+.form-input:focus + .form-input-icon,
+.form-input:hover + .form-input-icon {
   fill: var(--accent-color);
 }
-.modal-form__label {
+.form-input-label {
   display: flex;
   flex-direction: column;
   align-items: baseline;
@@ -384,11 +274,11 @@ textarea {
   font-size: 12px;
   position: relative;
 }
-.modal-form__label--comment {
+.form-input-label.message {
   margin-bottom: 20px;
 }
 
-.modal-form__input-icon {
+.form-input-icon {
   display: block;
   width: 18px;
   height: 18px;
@@ -400,7 +290,7 @@ textarea {
 }
 /* ================================================ */
 /* textarea */
-.modal-form__textarea {
+.form-message {
   font-size: 12px;
   letter-spacing: 0.01em;
   line-height: 1.14;
@@ -409,12 +299,12 @@ textarea {
   padding: 12px 16px;
 }
 
-.modal-form__textarea::placeholder {
+.form-message::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 /* ================================================= */
 /*  */
-.modal-form__policy-box {
+.policy-box {
   font-size: 14px;
   color: var(--primary-text-color);
   margin-bottom: 30px;
@@ -423,13 +313,13 @@ textarea {
   justify-content: center;
 }
 
-.modal-form__policy-box a {
+.policy-box a {
   color: var(--accent-color);
   text-decoration: underline;
 }
 /* ===кастомный чекбокс=== */
 
-.modal-form__policy-checkbox:checked + .modal-form__policy-box::before {
+.policy-checkbox:checked + .policy-box::before {
   background-image: url(../images/icon-check.svg);
   border-color: var(--accent-color);
   background-color: var(--accent-color);
@@ -438,12 +328,12 @@ textarea {
   background-size: contain;
   background-origin: border-box;
 }
-.modal-form__policy-checkbox:hover + .modal-form__policy-box::before,
-.modal-form__policy-checkbox:focus + .modal-form__policy-box::before {
+.policy-checkbox:hover + .policy-box::before,
+.policy-checkbox:focus + .policy-box::before {
   border: 2px solid var(--accent-color);
 }
 
-.modal-form__policy-box::before {
+.policy-box::before {
   content: '';
   display: block;
   cursor: pointer;
@@ -456,12 +346,12 @@ textarea {
 }
 
 /* кнопка ===отправить=== */
-.modal-form__button {
+.submit-form-btn {
   padding: 10px 55px;
   transition: box-shadow 250ms var(--timing-function);
 }
-.modal-form__button:hover,
-.modal-form__button:focus {
+.submit-form-btn:hover,
+.submit-form-btn:focus {
   box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.4);
 }
 
@@ -819,7 +709,7 @@ textarea {
 /* ================================================ */
 
 /* ===футер=== */
-.footer-section {
+.footer {
   display: flex;
   align-items: baseline;
 }
@@ -828,21 +718,18 @@ textarea {
   padding: 60px 0;
 }
 
-
-/* footer contacts  */
-.footer-section__wrapper {
-  flex-grow: 1;
-}
-/* футер лого */
-.footer-section__logo.logo {
+.logo.logo-footer {
   margin-bottom: 20px;
 }
-
-.footer-section__logo-custom {
+.logo-footer-txt {
   color: #fff;
 }
+/* footer contacts  */
+.contacts-ft {
+  flex-grow: 1;
+}
 
-.footer-contacts__link {
+.contacts-footer {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
@@ -850,24 +737,24 @@ textarea {
   transition: color 250ms var(--timing-function);
 }
 
-.footer-contacts__link--adds {
+.contacts-footer.location {
   color: #fff;
 }
 
-.footer-contacts__link:focus,
-.footer-contacts__link:hover {
+.contacts-footer:focus,
+.contacts-footer:hover {
   color: var(--accent-color);
 }
 
-.footer-contacts__item {
+.footer-item {
   margin-bottom: 9px;
 }
-.footer-contacts__item:last-child {
+.footer-item:last-child {
   margin-bottom: 0;
 }
 /* ===соцсети=== футера */
 .soc-title-ft,
-.mailing-form__label {
+.mailing-title-ft {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -915,16 +802,16 @@ textarea {
 /* ==================================== */
 /* рассылка (футер) */
 
-.footer-form {
+.mailing-ft {
   margin-left: 93px;
 }
 
-.input-wrap {
+.form-field-ft {
   margin-top: 20px;
   display: flex;
   align-items: flex-end;
 }
-.mailing-form__input {
+.input-ft {
   color: rgba(255, 255, 255, 0.6);
   padding: 15px 16px;
   width: 358px;
@@ -934,34 +821,34 @@ textarea {
   background-color: transparent;
   transition: border 250ms var(--timing-function);
 }
-.mailing-form__input:hover,
-.mailing-form__input:focus {
+.input-ft:hover,
+.input-ft:focus {
   border: 1px solid var(--accent-color);
 }
-.mailing-form__input:not(placeholder-shown) {
+#user_mail:not(placeholder-shown) {
   color: #fff;
 }
 
-.mailing-form__button {
+.submit-btn-ft {
   align-items: center;
   display: flex;
   padding: 10px 29px;
   margin-left: 12px;
   transition: box-shadow 250ms var(--timing-function);
 }
-.mailing-form__button:hover,
-.mailing-form__button:focus {
+.submit-btn-ft:hover,
+.submit-btn-ft:focus {
   box-shadow: 0px 0px 2px #fff, 0px 0px 4px #fff;
 }
 
-.mailing-form__icon {
+.icon-send-ft {
   margin-left: 10px;
   width: 24px;
   height: 24px;
   fill: #fff;
 }
-.mailing-form__button:hover .icon-send-ft,
-.mailing-form__button:focus .icon-send-ft {
+.submit-btn-ft:hover .icon-send-ft,
+.submit-btn-ft:focus .icon-send-ft {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   animation-name: pulse;
   animation-duration: 2500ms;
