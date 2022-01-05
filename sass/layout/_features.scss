@@ -22,15 +22,9 @@
     text-transform: uppercase;
 }
 
-.features-section {
-    &__visually-hidden {
-        @include hidden
-    }
-
-    ;
-}
-
 .features {
+    &-caption {
+        @include hidden;}
     &__list {
         display: flex;
     }
