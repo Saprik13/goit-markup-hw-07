@@ -137,13 +137,14 @@
         }
     }
 }
-.input-wrap {
-    margin-top: 20px;
-    display: flex;
-    align-items: flex-end;
-}
+
 
 .mailing-form {
+    &__input-wrap {
+        margin-top: 20px;
+        display: flex;
+        align-items: flex-end;
+    }
     &__label {
         @include secondary-title;
         color: #fff;

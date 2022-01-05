@@ -941,7 +941,7 @@ textarea {
   margin-left: 93px;
 }
 
-.input-wrap {
+.mailing-form__input-wrap {
   margin-top: 20px;
   display: flex;
   align-items: flex-end;
