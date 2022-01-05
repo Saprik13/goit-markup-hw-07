@@ -1,3 +1,14 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--title-text-color);
+    font-family: var(--primary-font), sans-serif;
+    background-color: #fff;
+}
 
 address {
     font-style: normal;
@@ -22,6 +33,7 @@ p {
 
 a {
     text-decoration: none;
+    color: var(--title-text-color);
 }
 
 img {

@@ -1,8 +1,13 @@
-// переменные
-@import './utils/variabless';
-@import './utils/animations';
-
-// базовые стили и нормалайз
 @import './base/normalize';
-@import './base/reset-css';
-@import './base/base-style';
+@import './base/reset';
+@import './utils/variables';
+@import './base/base-styles';
+@import './layout/header';
+@import './layout/hero';
+@import './components/modal';
+@import './layout/features';
+@import './layout/attend';
+@import './layout/team';
+@import './components/social';
+@import './components/customers-logo';
+@import './layout/footer';

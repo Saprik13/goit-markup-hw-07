@@ -136,34 +136,32 @@ textarea {
 .header-section {
   display: flex;
 }
-
-.header-contacts__icon {
-  margin-right: 10px;
-  fill: var(--primary-text-color);
-  transition: fill 250ms var(--timing-function);
-}
-
-.header-contacts__link:hover>.header-contacts__icon,
-.header-contacts__link:focus>.header-contacts__icon {
-  fill: var(--accent-color);
-}
-
-.header-contacts {
+.navigation-wrapper {
   display: flex;
-  margin-left: auto;
+  align-items: center;
+}
+/* логотип студии */
+.logo,
+.navigation-wrapper__logo {
+  display: inline-block;
+  color: var(--accent-color);
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
 }
 
-.header-contacts__list {
-  display: flex;
+.navigation-wrapper__logo {
+  margin-right: 93px;
+}
+
+.navigation-wrapper__logo--black {
+  color: #000;
 }
 
 .site-nav__list {
   display: flex;
-}
-
-.navigation-wrapper {
-  display: flex;
-  align-items: center;
 }
 
 .site-nav__item,
@@ -190,6 +188,26 @@ textarea {
   letter-spacing: 0.02em;
   transition: color 250ms var(--timing-function);
 }
+.header-contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-contacts__list {
+  display: flex;
+}
+
+.header-contacts__icon {
+  margin-right: 10px;
+  fill: var(--primary-text-color);
+  transition: fill 250ms var(--timing-function);
+}
+
+.header-contacts__link:hover>.header-contacts__icon,
+.header-contacts__link:focus>.header-contacts__icon {
+  fill: var(--accent-color);
+}
+
 
 .header-contacts__link {
   display: inline-flex;
@@ -197,7 +215,6 @@ textarea {
   align-items: center;
   color: var(--primary-text-color);
 }
-
 .site-nav__link:focus,
 .header-contacts__link:hover,
 .site-nav__link:hover,
@@ -221,26 +238,9 @@ textarea {
   border-radius: 2px;
 }
 
+
 /* ============================================= */
 
-/* логотип студии */
-.logo {
-  display: inline-block;
-  color: var(--accent-color);
-  font-family: var(--secondary-font);
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-}
-
-.navigation-wrapper__logo {
-  margin-right: 93px;
-}
-
-.navigation-wrapper__logo--black {
-  color: #000;
-}
 
 /* =============================================== */
 
@@ -793,7 +793,7 @@ textarea {
   display: block;
 }
 
-.portfolio__info {
+.portfolio__overlay {
   position: absolute;
   padding: 63px 24px;
   top: 0;
@@ -828,8 +828,8 @@ textarea {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio__link:hover .portfolio__info,
-.portfolio__link:focus .portfolio__info {
+.portfolio__link:hover .portfolio__overlay,
+.portfolio__link:focus .portfolio__overlay {
   transform: translateY(0);
 }
 
