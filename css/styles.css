@@ -110,9 +110,7 @@ textarea {
 }
 
 /* скрытые элементы */
-.features-section__visually-hidden,
-.portfolio-section__visually-hidden,
-.modal__policy-checkbox {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
