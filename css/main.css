@@ -1416,7 +1416,7 @@ textarea {
 }
 
 .address__item:last-child {
-  margin-right: 0;
+  margin-bottom: 0;
 }
 
 .address__link {
