@@ -77,10 +77,11 @@
         border-radius: 2px;
     }
 }
-
+.page-header__contacts {
+    margin-left: auto;
+}
 .contacts {
     display: flex;
-    margin-left: auto;
 }
 
 .contacts__link {

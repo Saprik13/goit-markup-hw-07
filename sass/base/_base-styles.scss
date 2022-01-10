@@ -1,9 +1,9 @@
 .section {
     padding: 94px 0;
 }
-.section__no-padding-top {
+.section--no-padding-top {
     padding-top: 0;
 }
-.section__other-bcg{
+.section--other-bcg{
 background-color: var(--secondary-background-color);
 }
